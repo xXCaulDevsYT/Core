@@ -4,10 +4,10 @@ Code for grabbing file contents
 file_get_contents("http://x.com/file.txt");
 */
 
-namespace majorplayz;
+namespace TestPluginByEmerald;
 
-/* Majorcraft Core Plugin
-   Written By MajorPlayz and Muqsit! XD */
+/* CubeX Core Plugin
+   Written By Emerald and Muqsit! XD */
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 use pocketmine\event\Listener;
@@ -24,8 +24,8 @@ class Main extends PluginBase implements Listener
 {
     //Constnants:
 
-    const AUTHOR = "MajorPlayz";
-    const PREFIX = "Core:";
+    const AUTHOR = "EmeraldAssasinYT";
+    const PREFIX = "§l§4CubeX§a>§r";
 
     public function onEnable()
     {
@@ -78,9 +78,9 @@ class Main extends PluginBase implements Listener
                     if (!isset($args[0])) {
                         if (!$sender->hasPermission("core.command.info")) return;
                         $sender->sendMessage(TextFormat::GOLD."-------------");
-                        $sender->sendMessage(TextFormat::GREEN . "Majorcraft Core!");
+                        $sender->sendMessage(TextFormat::GREEN . "CubeX MCPE Core!");
                         $sender->sendMessage(TextFormat::GOLD."-------------");
-                        $sender->sendMessage(TextFormat::BLUE . "This core was developed by the" . TextFormat::RED . " Majorcraft" . TextFormat::BLUE . " team.");
+                        $sender->sendMessage(TextFormat::BLUE . "This core was developed by the" . TextFormat::RED . " Emerald" . TextFormat::BLUE . " team.");
                         $sender->sendMessage(TextFormat::AQUA . "The core was a project inspired by the very great server, LBSG and has taken forever (a very long time)!");
                         $sender->sendMessage(TextFormat::AQUA . "Core version: " . TextFormat::BLUE . "1.0.0 UNSTABLE");
                         return true;
@@ -88,28 +88,28 @@ class Main extends PluginBase implements Listener
 
                     }
                 }
-                case "commands": {
+                case "cubexlinks": {
                     if (!isset($args[0])) {
                         $sender->sendMessage(TextFormat::GOLD . "------------------");
-                        $sender->sendMessage(TextFormat::AQUA . "Majorcraft Factions!");
+                        $sender->sendMessage(TextFormat::AQUA . "§l§bBOT: §r§7Wow Lets Check These Out");
                         $sender->sendMessage(TextFormat::GOLD . "------------------");
-                        $sender->sendMessage(TextFormat::BLUE . "Factions Help:" . TextFormat::GREEN . " /fhelp");
-                        $sender->sendMessage(TextFormat::BLUE . "Mail Help:" . TextFormat::GREEN . " /mhelp");
-                        $sender->sendMessage(TextFormat::YELLOW . "Vote: " . TextFormat::GREEN . "majorcraft.xyz/vote");
+                        $sender->sendMessage(TextFormat::BLUE . "Store" . TextFormat::GREEN . " §7Hmmmm?");
+                        $sender->sendMessage(TextFormat::BLUE . "Twitter" . TextFormat::GREEN . " §7What The?");
+                        $sender->sendMessage(TextFormat::YELLOW . "Vote: " . TextFormat::GREEN . "§7Where Did I Go?");
                         $sender->sendMessage(TextFormat::DARK_AQUA . "-----------------------");
                         return true;
                         break;
                     }
                 }
                 
-                case "fhelp": {
+                case "cubexhelp": {
                 	$sender->sendMessage(TextFormat::GREEN."-----------");
-                	$sender->sendMessage(TextFormat::GOLD."Factions Help");
+                	$sender->sendMessage(TextFormat::GOLD."CubeX Core Help");
                 	$sender->sendMessage(TextFormat::GREEN."-----------");
-                	$sender->sendMessage(TextFormat::BLUE."Main Command:".TextFormat::AQUA." /f");
-                	$sender->sendMessage(TextFormat::BLUE."Create Faction:".TextFormat::AQUA." /f create <name>");
-                	$sender->sendMessage(TextFormat::BLUE."Invite Players:".TextFormat::AQUA." /f invite <player>");
-                	$sender->sendMessage(TextFormat::GREEN."More Commands:".TextFormat::YELLOW." /f help");
+                	$sender->sendMessage(TextFormat::BLUE."/help".TextFormat::AQUA." Main help command");
+                	$sender->sendMessage(TextFormat::BLUE."/hub".TextFormat::AQUA." Returns you to hub);
+                	$sender->sendMessage(TextFormat::BLUE."Mail".TextFormat::AQUA." Coming Soon");
+                	$sender->sendMessage(TextFormat::BLUE."More Commands".TextFormat::YELLOW." help");
                 	return true;
                 	break;
                 }
